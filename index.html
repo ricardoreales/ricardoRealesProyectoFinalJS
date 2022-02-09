@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto_final_js_Ricardo_Reales</title>
+    <link rel="icon" href="./imagenes/nutritionZoneLogo-04.svg" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="img_header" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+        <div class="redes_header">
+            <a href="#"> <img class="redes_header_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
+            <a href="#"><img class="redes_header_icono" src="./iconos/twitter_icono.svg" alt=""></a>
+            <a href="#"><img class="redes_header_icono" src="./iconos/facebook_icono.svg" alt=""></a>
+        </div>
+    </header>
+
+    <div class="container_nav">
+        <div class="carrito_style">
+            <span class="material-icons ">
+                shopping_cart
+            </span>
+            <span>5</span>
+        </div>
+
+        <div class="input_search">
+            <input class="input_search_style" type="text" placeholder="Buscar...">
+            <!-- <button type="submit"><span class="material-icons lupa_style">
+                    search
+                </span></button> -->
+        </div>
+        <nav>
+            <div id="toggle"></div>
+            <div id="sidebar">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="#">IMC</a></li>
+                    <li><a href="#">proteinas</a></li>
+                    <li><a href="#">contactame </a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+
+
+    <section aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="./imagenes/whey1.webp" alt="Nature Image #1">
+                </li>
+                <li class="slide">
+                    <img src="./imagenes/whey3.webp" alt="Nature Image #2">
+                </li>
+                <li class="slide">
+                    <img src="./imagenes/whey6.webp" alt="Nature Image #3">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        calculo de IMC
+    </section>
+    <section>
+        <h1>proteinas</h1>
+        <hr>
+        <div>
+            <label for="ordenar">Ordenar por</label>
+            <form>
+                <select name="talles">
+                    <option value="precio">Precio</option>
+                    <option value="nombre">Nombre</option>
+
+                </select>
+            </form>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div>
+            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
+            <h3>whey x protein 1Kg</h3>
+            <h3>$ 2500</h3>
+        </div>
+        <div>
+            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
+            <h3>whey x protein 1Kg</h3>
+            <h3>$ 2500</h3>
+        </div>
+        <div>
+            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
+            <h3>whey x protein 1Kg</h3>
+            <h3>$ 2500</h3>
+        </div>
+        <div>
+            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
+            <h3>whey x protein 1Kg</h3>
+            <h3>$ 2500</h3>
+        </div>
+    </section>
+    <footer>
+        <section>
+            <div>
+                <h2>newslatter</h2>
+                <input type="email" name="email" placeholder="nombre@ejemplo.com" />
+                <button>suscribirse</button>
+            </div>
+            <div>
+                <a href="#">istagram</a>
+                <a href="#">twitter</a>
+                <a href="#">facebook</a>
+            </div>
+            <div>
+
+                <h2>+54 9 11 2667 7230</h2>
+                <h2>nutritionzone@gmail.com</h2>
+                <img src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+            </div>
+            <div>
+                <h2>By: Ricardo Reales</h2>
+                <h2>coder.ricardo.9bf5</h2>
+            </div>
+        </section>
+    </footer>
+    <script src="./js/nav.js"></script>
+    <script src="./js/carrucel.js"></script>
+
+</body>
+
+</html>
