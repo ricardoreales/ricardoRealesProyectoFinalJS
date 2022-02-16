@@ -3,19 +3,22 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: $colorTerceario;
   .input_search {
     .input_search_style {
       padding: 6px;
       border-radius: 20px;
+      width: 600px;
     }
-    .lupa_style {
-      color: blue;
-      padding: 10px;
-    }
+    // .lupa_style {
+    //   color: blue;
+    //   padding: 10px;
+    // }
   }
   .carrito_style {
     color: $colorCuatro;
+    
+    
   }
 }

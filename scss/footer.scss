@@ -1,0 +1,74 @@
+footer {
+  background-color: $colorSecundario;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: $colorCuatro;
+  .h2_newslatter {
+    padding: 10px;
+    font-size: 30px;
+  }
+  .newslatter {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .input-style {
+      padding: 10px;
+      width: 400px;
+    }
+    .btn_suscribirse {
+      background-color: $colorPrimario;
+      padding: 10px;
+
+      margin-top: 5px;
+      width: 200px;
+      color: $colorCuatro;
+      font-size: 20px;
+    }
+  }
+
+
+  .contactos{
+    .redes_footer {
+        display: flex;
+        justify-content: center;
+    
+        .redes_footer_icono {
+          height: 50px;
+          width: 50px;
+          margin: 5px;
+          padding: 10px;
+          background-color: $colorPrimario;
+          border-radius: 10px;
+        }
+      }
+
+
+
+
+
+
+  }
+
+
+
+
+
+  
+
+  .contactos {
+    .h2_contactos {
+        padding: 10px;
+        font-size: 30px;
+
+    }
+    .logo_footer {
+        width: 300px;
+        margin-left: 100px;
+    }
+  }
+}

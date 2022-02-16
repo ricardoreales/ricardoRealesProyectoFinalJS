@@ -1,3 +1,131 @@
-html{
-    background-color: grey;
+.ordenar_por {
+  padding: 20px;
+  color: $colorCuatro;
+  background-color: $colorTerceario;
+  display: flex;
+  flex-direction: column;
+  .h1_main {
+    font-size: 80px;
+    text-transform: uppercase;
+  }
+  .ordernar {
+    font-size: 40px;
+  }
+  .ordenar_selection {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+.galeria_productos {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item1 item2 item3"
+    "item4 item5 item6"
+    "item7 item8 item9";
+  text-align: center;
+
+  .item1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: item1;
+    
+  }
+  .item2 {
+    grid-area: item2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item3 {
+    grid-area: item3;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item4 {
+    grid-area: item4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item5 {
+    grid-area: item5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item6 {
+    grid-area: item6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item7 {
+    grid-area: item7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item8 {
+    grid-area: item8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .item9 {
+    grid-area: item9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  img {
+      width: 200px;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 250ms;
+
+    }
+  }
+  .cantidad_style {
+    color: $colorCuatro;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $colorPrimario;
+    label {
+      font-size: 20px;
+    }
+    input {
+      font-size: 20px;
+      margin-top: 5px;
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  }
 }

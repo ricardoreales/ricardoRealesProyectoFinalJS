@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <img class="img_header" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+        <img class="logo_header" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
         <div class="redes_header">
             <a href="#"> <img class="redes_header_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
             <a href="#"><img class="redes_header_icono" src="./iconos/twitter_icono.svg" alt=""></a>
@@ -22,11 +22,9 @@
     </header>
 
     <div class="container_nav">
-        <div class="carrito_style">
-            <span class="material-icons ">
-                shopping_cart
-            </span>
-            <span>5</span>
+        <div id="carritoToggle" class="carrito_style">
+            <span class="material-icons">shopping_cart</span>
+            <span class="cantidad"></span>
         </div>
 
         <div class="input_search">
@@ -46,8 +44,20 @@
                 </ul>
             </div>
         </nav>
-
     </div>
+
+    <div id="carritoModal">
+        <span class="material-icons close">close</span>
+        <h2>MI COMPRA</h2>
+        <div>
+            <table>
+                <tbody id="carritoProductos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
 
 
 
@@ -57,7 +67,7 @@
             <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
             <ul data-slides>
                 <li class="slide" data-active>
-                    <img src="./imagenes/whey1.webp" alt="Nature Image #1">
+                    <img src="./imagenes/HOME-BANNER-SUPERIOR-3.jpg" alt="Nature Image #1">
                 </li>
                 <li class="slide">
                     <img src="./imagenes/whey3.webp" alt="Nature Image #2">
@@ -69,84 +79,104 @@
         </div>
     </section>
 
-    <section class="section_imc" >
+    <!-- <section class="section_imc">
         <div class="btn_imc_container">
             <a href="#" class="btn">
                 <div class="text_btn_1">CALCULAR</div>
-                <div class="text_btn_2">IMC</div>
-                <!-- <div class="text_btn_3">Indice de Masa Corporal</div> -->
-            </a>
-          </div>
-        <!-- <button class="btn_imc_container">
+                <div class="text_btn_2">IMC</div> -->
+    <!-- <div class="text_btn_3">Indice de Masa Corporal</div> -->
+    <!-- </a>
+        </div> -->
+    <!-- <button class="btn_imc_container">
             <div class="texte_Buttom1">CALCULAR</div>
             <div class="texte_Buttom2">IMC</div>
             <div class="texte_Buttom3">Indice de Masa Corporal</div>
         </button> -->
-    </section>
-    <section>
-        <h1>proteinas</h1>
-        <hr>
-        <div>
-            <label for="ordenar">Ordenar por</label>
-            <form>
-                <select name="talles">
-                    <option value="precio">Precio</option>
-                    <option value="nombre">Nombre</option>
+    <!-- </section> -->
 
-                </select>
-            </form>
+    <section class="imc_container">
+        <div class="titulo_style">
+            <h2>CALCULA TU IMC (indice de masa corporal)</h2>
         </div>
-        <hr>
-    </section>
-    <section>
-        <div>
-            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
-            <h3>whey x protein 1Kg</h3>
-            <h3>$ 2500</h3>
-        </div>
-        <div>
-            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
-            <h3>whey x protein 1Kg</h3>
-            <h3>$ 2500</h3>
-        </div>
-        <div>
-            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
-            <h3>whey x protein 1Kg</h3>
-            <h3>$ 2500</h3>
+
+        <div class="input">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="ingresa tu nombre" class="input_style">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" placeholder="ingresa tu peso" class="input_style">
+            <label for="altura">Altura (mts)</label>
+            <input type="number" id="altura" placeholder="ingresa tu altura" class="input_style">
+
+            <input onclick="obtenerImc()" type="button" value="Calcular!">
+
         </div>
         <div>
-            <img src="./imagenes/wheyPtroteinEmbase.png" alt="proteina">
-            <h3>whey x protein 1Kg</h3>
-            <h3>$ 2500</h3>
+            <h2 class="h2">IMC = <span id="imc" class="input_style"></span></h2>
         </div>
     </section>
+    <section class="recomendaciones_container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VVeGPOgJTus" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div class="recomendaciones_style">
+            <h2>Recomendaciones segun tu IMC:</h2>
+            <p id="recomendaciones"></p>
+        </div>
+    </section>
+
+
+    <main>
+        <div class="ordenar_por">
+            <h1 class="h1_main">proteinas</h1>
+            <hr>
+            <div class="ordernar">
+                <label for="ordenar">Ordenar por</label>
+                <form>
+                    <select class="ordenar_selection" name="talles">
+                        <option value="precio">Precio</option>
+                        <option value="nombre">Nombre</option>
+
+                    </select>
+                </form>
+            </div>
+            <hr>
+        </div>
+
+        <section id="galeria" class="galeria_productos">
+          
+        </section>
+    </main>
     <footer>
-        <section>
-            <div>
-                <h2>newslatter</h2>
-                <input type="email" name="email" placeholder="nombre@ejemplo.com" />
-                <button>suscribirse</button>
+        <h2 class="h2_newslatter">Suscribirse para recibir todas nuestra promociones</h2>
+        <div class="newslatter">
+            <input class="input-style" type="email" name="email" placeholder="nombre@ejemplo.com" />
+            <button class="btn_suscribirse">suscribirse</button>
+        </div>
+        <section class="contactos">
+            <div class="redes_footer">
+                <a href="#"> <img class="redes_footer_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
+                <a href="#"><img class="redes_footer_icono" src="./iconos/twitter_icono.svg" alt=""></a>
+                <a href="#"><img class="redes_footer_icono" src="./iconos/facebook_icono.svg" alt=""></a>
             </div>
-            <div>
-                <a href="#">istagram</a>
-                <a href="#">twitter</a>
-                <a href="#">facebook</a>
-            </div>
-            <div>
-
+            <div class="contactos">
                 <h2>+54 9 11 2667 7230</h2>
                 <h2>nutritionzone@gmail.com</h2>
-                <img src="./imagenes/nutritionZoneLogo-04.svg" alt="">
             </div>
-            <div>
-                <h2>By: Ricardo Reales</h2>
-                <h2>coder.ricardo.9bf5</h2>
-            </div>
+            <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
         </section>
+        <div>
+            <h2>By: Ricardo Reales</h2>
+            <h2>coder.ricardo.9bf5</h2>
+        </div>
+
     </footer>
     <script src="./js/nav.js"></script>
     <script src="./js/carrucel.js"></script>
-
+    <script type="text/javascript" src="./js/imc.js"></script>
+    <script type="text/javascript" src="./js/carrito.js"></script>
+    
+    
 </body>
 
 </html>

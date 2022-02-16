@@ -5,8 +5,9 @@ header{
     justify-content: space-between;
     background-color: $colorSecundario;
     padding: 10px;
-    .img_header{
-        width: 150px;
+    .logo_header{
+        width: 300px;
+        margin-left: 100px;
         
     }
     .redes_header{
@@ -15,10 +16,10 @@ header{
         
         .redes_header_icono{
             
-            height: 30px;
-            width: 30px;
+            height: 50px;
+            width: 50px;
             margin: 5px;
-            padding: 5px;
+            padding: 10px;
             background-color: $colorPrimario;
             border-radius: 10px;
             
