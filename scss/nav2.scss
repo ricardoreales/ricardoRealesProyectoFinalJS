@@ -1,5 +1,10 @@
 .container_nav {
-  
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -18,7 +23,5 @@
   }
   .carrito_style {
     color: $colorCuatro;
-    
-    
   }
 }

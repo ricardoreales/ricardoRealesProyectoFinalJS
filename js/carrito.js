@@ -42,7 +42,7 @@ productos.forEach(element => {
         <div class="cantidad_style">
             <h2>${element.producto} </h2>
             <h3>$ ${element.precio} </h3>
-            <button onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
+            <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
         </div> `
     document.getElementById("galeria").appendChild(contenedor)
 });

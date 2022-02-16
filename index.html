@@ -13,7 +13,9 @@
 
 <body>
     <header>
-        <img class="logo_header" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+
+        <a href="#"> <img class="logo_header" src="./imagenes/nutritionZoneLogo-04.svg" alt=""> </a>
+
         <div class="redes_header">
             <a href="#"> <img class="redes_header_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
             <a href="#"><img class="redes_header_icono" src="./iconos/twitter_icono.svg" alt=""></a>
@@ -67,13 +69,13 @@
             <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
             <ul data-slides>
                 <li class="slide" data-active>
-                    <img src="./imagenes/HOME-BANNER-SUPERIOR-3.jpg" alt="Nature Image #1">
+                    <img src="./imagenes/proteinaCarrucel-10.jpg" alt="Nature Image #1">
                 </li>
                 <li class="slide">
-                    <img src="./imagenes/whey3.webp" alt="Nature Image #2">
+                    <img src="./imagenes/proteinaCarrucel-09.jpg" alt="Nature Image #2">
                 </li>
                 <li class="slide">
-                    <img src="./imagenes/whey6.webp" alt="Nature Image #3">
+                    <img src="./imagenes/proteinaCarrucel-08.jpg" alt="Nature Image #3">
                 </li>
             </ul>
         </div>
@@ -95,35 +97,25 @@
     <!-- </section> -->
 
     <section class="imc_container">
-        <div class="titulo_style">
-            <h2>CALCULA TU IMC (indice de masa corporal)</h2>
-        </div>
-
         <div class="input">
-            <label for="nombre">Nombre</label>
+            <h2 class="h2_titulo">CALCULA TU IMC </h2>
+            <h3>(indice de masa corporal)</h3>
+            
             <input type="text" id="nombre" placeholder="ingresa tu nombre" class="input_style">
-            <label for="peso">Peso (kg)</label>
-            <input type="number" id="peso" placeholder="ingresa tu peso" class="input_style">
-            <label for="altura">Altura (mts)</label>
-            <input type="number" id="altura" placeholder="ingresa tu altura" class="input_style">
-
-            <input onclick="obtenerImc()" type="button" value="Calcular!">
-
+            
+            <input type="number" id="peso" placeholder="ingresa tu peso en (kg)" class="input_style">
+            
+            <input type="number" id="altura" placeholder="ingresa tu altura en (mts)" class="input_style">
+            <input class="calcular_style" onclick="obtenerImc()" type="button" value="Calcular!">
         </div>
-        <div>
-            <h2 class="h2">IMC = <span id="imc" class="input_style"></span></h2>
-        </div>
-    </section>
-    <section class="recomendaciones_container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VVeGPOgJTus" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
         <div class="recomendaciones_style">
-            <h2>Recomendaciones segun tu IMC:</h2>
+            <h2>Recomendaciones segun tu
+                <h2>IMC = <span id="imc" class="input_resultado"></span></h2>
+            </h2>
             <p id="recomendaciones"></p>
         </div>
     </section>
+
 
 
     <main>
@@ -144,28 +136,37 @@
         </div>
 
         <section id="galeria" class="galeria_productos">
-          
+
         </section>
     </main>
     <footer>
-        <h2 class="h2_newslatter">Suscribirse para recibir todas nuestra promociones</h2>
-        <div class="newslatter">
-            <input class="input-style" type="email" name="email" placeholder="nombre@ejemplo.com" />
-            <button class="btn_suscribirse">suscribirse</button>
+        <div class="container_redes_contacto">
+            <div class="newslatter_container">
+                <h2 class="h2_newslatter">Suscribirse para recibir todas nuestra promociones</h2>
+                <div class="newslatter">
+                    <input class="input-style" type="email" name="email" placeholder="nombre@ejemplo.com" />
+                    <button class="btn_suscribirse">suscribirse</button>
+                </div>
+            </div>
+
+            <div class="redes_footer_container">
+                <div class="redes_footer_container_icon">
+                    <a href="#"> <img class="redes_footer_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
+                    <a href="#"><img class="redes_footer_icono" src="./iconos/twitter_icono.svg" alt=""></a>
+                    <a href="#"><img class="redes_footer_icono" src="./iconos/facebook_icono.svg" alt=""></a>
+                </div>
+                <div class="contactos_container">
+                    <h2>+54 9 11 2667 7230</h2>
+                    <h2>nutritionzone@gmail.com</h2>
+                </div>
+            </div>
+            <div >
+                <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+            </div>
         </div>
-        <section class="contactos">
-            <div class="redes_footer">
-                <a href="#"> <img class="redes_footer_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
-                <a href="#"><img class="redes_footer_icono" src="./iconos/twitter_icono.svg" alt=""></a>
-                <a href="#"><img class="redes_footer_icono" src="./iconos/facebook_icono.svg" alt=""></a>
-            </div>
-            <div class="contactos">
-                <h2>+54 9 11 2667 7230</h2>
-                <h2>nutritionzone@gmail.com</h2>
-            </div>
-            <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
-        </section>
-        <div>
+
+
+        <div class="autor">
             <h2>By: Ricardo Reales</h2>
             <h2>coder.ricardo.9bf5</h2>
         </div>
@@ -175,8 +176,8 @@
     <script src="./js/carrucel.js"></script>
     <script type="text/javascript" src="./js/imc.js"></script>
     <script type="text/javascript" src="./js/carrito.js"></script>
-    
-    
+
+
 </body>
 
 </html>

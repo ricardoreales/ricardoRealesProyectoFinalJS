@@ -2,41 +2,62 @@ footer {
   background-color: $colorSecundario;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+
+  // justify-content: center;
+  // text-align: center;
+  // width: 100%;
   color: $colorCuatro;
-  .h2_newslatter {
-    padding: 10px;
-    font-size: 30px;
-  }
-  .newslatter {
+
+  .container_redes_contacto {
     display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
-    .input-style {
-      padding: 10px;
-      width: 400px;
-    }
-    .btn_suscribirse {
-      background-color: $colorPrimario;
-      padding: 10px;
 
-      margin-top: 5px;
-      width: 200px;
+    .newslatter_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
       color: $colorCuatro;
-      font-size: 20px;
+      .h2_newslatter {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .newslatter {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+
+        .input-style {
+          padding: 10px;
+          width: 30vw;
+        }
+        .btn_suscribirse {
+          background-color: $colorPrimario;
+          padding: 10px;
+
+          margin-top: 5px;
+          width: 200px;
+          color: $colorCuatro;
+          font-size: 20px;
+        }
+      }
     }
-  }
 
-
-  .contactos{
-    .redes_footer {
+    .redes_footer_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      
+      .redes_footer_container_icon {
         display: flex;
         justify-content: center;
-    
+        align-items: center;
+        
+
         .redes_footer_icono {
           height: 50px;
           width: 50px;
@@ -46,29 +67,36 @@ footer {
           border-radius: 10px;
         }
       }
+    }
+    .contactos_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        padding: 10px;
+        font-size: 20px;
+      }
 
+     
+    }
+  }
 
-
-
-
-
+  .logo_footer {
+    width: 10vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+    
   }
 
 
 
 
 
-  
-
-  .contactos {
-    .h2_contactos {
-        padding: 10px;
-        font-size: 30px;
-
-    }
-    .logo_footer {
-        width: 300px;
-        margin-left: 100px;
-    }
+  .autor{
+    background-color: $colorPrimario;
+    text-align: center;
   }
 }
+

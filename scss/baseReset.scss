@@ -4,9 +4,14 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: 'Rambla', sans-serif;
+ 
 }
+
 
 
 body.modalOpen{
   overflow: hidden;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rambla:ital@1&display=swap')
