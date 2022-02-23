@@ -30,7 +30,7 @@ function calculoImc(peso, altura) {
 
 
 function obtenerImc() {
-    // let nombre = document.getElementById("nombre").value
+
     let peso = parseFloat(document.getElementById("peso").value);
     let altura = parseFloat(document.getElementById("altura").value);
 
@@ -38,6 +38,7 @@ function obtenerImc() {
 
     } else {
         document.getElementById("recomendaciones").innerHTML = "ingrese un valor mayor a 0"
+        alertCustom("ingrese un valor mayor a 0")
     }
 
 
@@ -51,6 +52,6 @@ function obtenerImc() {
     document.getElementById("recomendaciones").innerHTML = recomendacionesImc(imc)
 
 
-}
 
+}
 

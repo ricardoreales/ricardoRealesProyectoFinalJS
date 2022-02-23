@@ -48,6 +48,23 @@ productos.forEach(element => {
 });
 
 
+//funcion de alerta al agregar un producto al carrito
+function alertCustom(mensaje, gravity = 'bottom', position = "right") {
+    Toastify({
+        text: mensaje,
+        className: "info",
+        gravity: gravity,
+        position: position,
+        style: {
+            background: "linear-gradient(to right, #ff8800, #ff010a)",
+        }
+    }).showToast();
+}
+
+
+
+
+
 
 
 
@@ -83,8 +100,12 @@ function agregarAlCarrito(productoId) {
     }
 
 
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     actualizaCarrito()
+
+    alertCustom("Producto Agregado","top")
+
+
 }
 
 
@@ -92,8 +113,8 @@ function agregarAlCarrito(productoId) {
 function actualizaCarrito() {
     //actualizar el numero de icono del carrito
     carritoCantidad.innerHTML = carrito.length
-    
-    
+
+
     //
     let carritoProductos = document.getElementById("carritoProductos")
     carritoProductos.innerHTML = ""
