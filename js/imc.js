@@ -25,6 +25,7 @@ function recomendacionesImc(imc) {
 
 function calculoImc(peso, altura) {
     let imc = parseFloat(peso / (altura * altura))
+    console.log(imc)
     return imc
 }
 

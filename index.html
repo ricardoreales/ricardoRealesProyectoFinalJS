@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto_final_js_Ricardo_Reales</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    
-<link rel="stylesheet" href="../dist/remodal-default-theme.css">
+
+   
     <link rel="icon" href="./imagenes/nutritionZoneLogo-04.svg" />
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
@@ -103,11 +103,11 @@
         <div class="input">
             <h2 class="h2_titulo">CALCULA TU IMC </h2>
             <h3>(indice de masa corporal)</h3>
-            
+
             <input type="text" id="nombre" placeholder="ingresa tu nombre" class="input_style">
-            
+
             <input type="number" id="peso" placeholder="ingresa tu peso en (kg)" class="input_style">
-            
+
             <input type="number" id="altura" placeholder="ingresa tu altura en (mts)" class="input_style">
             <input class="calcular_style" onclick="obtenerImc()" type="button" value="Calcular!">
         </div>
@@ -122,21 +122,25 @@
 
 
     <main>
-        <div class="ordenar_por">
-            <h1 class="h1_main">proteinas</h1>
-            <hr>
-            <div class="ordernar">
-                <label for="ordenar">Ordenar por</label>
-                <form>
-                    <select class="ordenar_selection" name="talles">
-                        <option value="precio">Precio</option>
-                        <option value="nombre">Nombre</option>
+        <div id="listado">
+            <div class="ordenar_por">
+                <h1 class="h1_main">proteinas</h1>
+                <hr>
+                <div class="ordernar">
+                    <label for="ordenar">Ordenar por</label>
+                    <form>
+                        <select class="ordenar_selection" name="talles">
+                            <option value="precio">Precio</option>
+                            <option value="nombre">Nombre</option>
 
-                    </select>
-                </form>
+                        </select>
+                    </form>
+                </div>
+                <hr>
             </div>
-            <hr>
         </div>
+
+        <div></div>
 
         <section id="galeria" class="galeria_productos">
 
@@ -163,7 +167,7 @@
                     <h2>nutritionzone@gmail.com</h2>
                 </div>
             </div>
-            <div >
+            <div>
                 <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
             </div>
         </div>
@@ -176,26 +180,28 @@
 
 
 
-        <div class="remodal" data-remodal-id="modal">
-            <button data-remodal-action="close" class="remodal-close"></button>
-            <h1>Remodal</h1>
-            <p>
-              Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
-            </p>
-            <br>
-            <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-            <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
-          </div>
+        // [
+        //     { "id": 1, "producto": "proteinaA", "precio": 2000, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 2, "producto": "proteinaB", "precio": 1900, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 3, "producto": "proteinaC", "precio": 1850, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 4, "producto": "proteinaD", "precio": 1700, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 5, "producto": "proteinaE", "precio": 1800, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 6, "producto": "proteinaF", "precio": 1550, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 7, "producto": "proteinaG", "precio": 1880, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 8, "producto": "proteinaH", "precio": 1630, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+        //     { "id": 9, "producto": "proteinaI", "precio": 1520, "imagen": "./imagenes/wheyPtroteinEmbase.png" }
+        // ]
+        
 
-          
+
     </footer>
     <script src="./js/nav.js"></script>
     <script src="./js/carrucel.js"></script>
     <script type="text/javascript" src="./js/imc.js"></script>
     <script type="text/javascript" src="./js/carrito.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  
-    
+
+
 
 
 </body>

@@ -20,32 +20,25 @@ carritoToggle.onclick = function () {
     actualizaCarrito()
 }
 
-//array de productos
-const productos = [
-    { id: 1, producto: "proteinaA", precio: 2000, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 2, producto: "proteinaB", precio: 1900, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 3, producto: "proteinaC", precio: 1850, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 4, producto: "proteinaD", precio: 1700, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 5, producto: "proteinaE", precio: 1800, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 6, producto: "proteinaF", precio: 1550, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 7, producto: "proteinaG", precio: 1880, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 8, producto: "proteinaH", precio: 1630, imagen: "./imagenes/wheyPtroteinEmbase.png" },
-    { id: 9, producto: "proteinaI", precio: 1520, imagen: "./imagenes/wheyPtroteinEmbase.png" }
-]
+//ajax
 
 
-//funcion para agregar los productos a la galeria
-productos.forEach(element => {
-    let contenedor = document.createElement("div");
-    contenedor.innerHTML = `
-        <img src="${element.imagen} " alt="proteina">
-        <div class="cantidad_style">
-            <h2>${element.producto} </h2>
-            <h3>$ ${element.precio} </h3>
-            <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
-        </div> `
-    document.getElementById("galeria").appendChild(contenedor)
-});
+fetch("./data.json")
+    .then((res) => res.json())
+    .then((productos) => {
+        //funcion para agregar los productos a la galeria
+        productos.forEach(element => {
+            let contenedor = document.createElement("div");
+            contenedor.innerHTML = `
+                <img src="${element.imagen} " alt="proteina">
+                <div class="cantidad_style">
+                    <h2>${element.producto} </h2>
+                    <h3>$ ${element.precio} </h3>
+                    <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
+                </div> `
+            document.getElementById("galeria").appendChild(contenedor)
+        })
+    })
 
 
 //funcion de alerta al agregar un producto al carrito
@@ -103,7 +96,7 @@ function agregarAlCarrito(productoId) {
     localStorage.setItem('carrito', JSON.stringify(carrito))
     actualizaCarrito()
 
-    alertCustom("Producto Agregado","top")
+    alertCustom("Producto Agregado", "top")
 
 
 }

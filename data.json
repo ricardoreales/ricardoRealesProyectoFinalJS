@@ -1,0 +1,11 @@
+ [
+            { "id": 1, "producto": "proteinaA", "precio": 2000, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 2, "producto": "proteinaB", "precio": 1900, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 3, "producto": "proteinaC", "precio": 1850, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 4, "producto": "proteinaD", "precio": 1700, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 5, "producto": "proteinaE", "precio": 1800, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 6, "producto": "proteinaF", "precio": 1550, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 7, "producto": "proteinaG", "precio": 1880, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 8, "producto": "proteinaH", "precio": 1630, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
+            { "id": 9, "producto": "proteinaI", "precio": 1520, "imagen": "./imagenes/wheyPtroteinEmbase.png" }
+        ]
