@@ -8,7 +8,7 @@
     <title>proyecto_final_js_Ricardo_Reales</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-   
+
     <link rel="icon" href="./imagenes/nutritionZoneLogo-04.svg" />
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
@@ -128,13 +128,15 @@
                 <hr>
                 <div class="ordernar">
                     <label for="ordenar">Ordenar por</label>
-                    <form>
-                        <select class="ordenar_selection" name="talles">
-                            <option value="precio">Precio</option>
+                    
+                        <select id="opcionOrdenar" class="ordenar_selection" onchange="ordenarBy(this.value)">
                             <option value="nombre">Nombre</option>
-
+                            <option value="precio">Precio</option>
                         </select>
-                    </form>
+
+                       
+                       
+                    
                 </div>
                 <hr>
             </div>
@@ -180,21 +182,12 @@
 
 
 
-        // [
-        //     { "id": 1, "producto": "proteinaA", "precio": 2000, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 2, "producto": "proteinaB", "precio": 1900, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 3, "producto": "proteinaC", "precio": 1850, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 4, "producto": "proteinaD", "precio": 1700, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 5, "producto": "proteinaE", "precio": 1800, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 6, "producto": "proteinaF", "precio": 1550, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 7, "producto": "proteinaG", "precio": 1880, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 8, "producto": "proteinaH", "precio": 1630, "imagen": "./imagenes/wheyPtroteinEmbase.png" },
-        //     { "id": 9, "producto": "proteinaI", "precio": 1520, "imagen": "./imagenes/wheyPtroteinEmbase.png" }
-        // ]
-        
+
+
 
 
     </footer>
+
     <script src="./js/nav.js"></script>
     <script src="./js/carrucel.js"></script>
     <script type="text/javascript" src="./js/imc.js"></script>

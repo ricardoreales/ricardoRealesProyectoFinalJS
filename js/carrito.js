@@ -20,26 +20,48 @@ carritoToggle.onclick = function () {
     actualizaCarrito()
 }
 
+
+let productos = []
 //ajax
-
-
 fetch("./data.json")
     .then((res) => res.json())
-    .then((productos) => {
-        //funcion para agregar los productos a la galeria
-        productos.forEach(element => {
-            let contenedor = document.createElement("div");
-            contenedor.innerHTML = `
-                <img src="${element.imagen} " alt="proteina">
-                <div class="cantidad_style">
-                    <h2>${element.producto} </h2>
-                    <h3>$ ${element.precio} </h3>
-                    <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
-                </div> `
-            document.getElementById("galeria").appendChild(contenedor)
-        })
+    .then((data) => {
+        productos = data
+        ordenarBy('nombre')
+        actualizarGaleria()
     })
 
+//funcion para agregar los productos a la galeria
+function actualizarGaleria() {
+
+    //se agregan los prodcutos al div galeria
+    let galeria = document.getElementById("galeria")
+    galeria.innerHTML = ""
+    productos.forEach(element => {
+        let contenedor = document.createElement("div");
+        contenedor.innerHTML = `
+            <img src="${element.imagen} " alt="proteina">
+            <div class="cantidad_style">
+                <h2>${element.nombre} </h2>
+                <h3>$ ${element.precio} </h3>
+                <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
+            </div> `
+        galeria.appendChild(contenedor)
+    })
+}
+
+// onchage para odernar por precio o nombre 
+function ordenarBy(opcion) {
+    //odernar productos
+    switch (opcion) {
+        case 'precio':
+            productos.sort((a, b) => (a.precio > b.precio) ? 1 : ((b.precio > a.precio) ? -1 : 0))
+            break
+        default:
+            productos.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
+    }
+   actualizarGaleria()
+}
 
 //funcion de alerta al agregar un producto al carrito
 function alertCustom(mensaje, gravity = 'bottom', position = "right") {
