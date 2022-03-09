@@ -1,11 +1,6 @@
-productos.sort((a, b) => {
-    if (a.precio > b.precio) {
-        return 1;
-        {
-            if (a.precio < b.name) {
-                return -1;
-            }
-        }
-    }
-    return 0;
-})
+
+let inputSearch = document.getElementById("encontrado")
+inputSearch.onchange = () => {
+    productosGaleria = productos.filter((element) => element.nombre.includes(inputSearch.value))
+    actualizarGaleria()
+}

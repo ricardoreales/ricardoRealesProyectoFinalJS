@@ -22,22 +22,33 @@ carritoToggle.onclick = function () {
 
 
 let productos = []
+let productosGaleria = []
 //ajax
 fetch("./data.json")
     .then((res) => res.json())
     .then((data) => {
         productos = data
-        ordenarBy('nombre')
+        productosGaleria = productos
         actualizarGaleria()
     })
 
 //funcion para agregar los productos a la galeria
 function actualizarGaleria() {
-
+    
+    //odernar productos
+    const opcion = document.getElementById("opcionOrdenar").value
+    switch (opcion) {
+        case 'precio':
+            productosGaleria.sort((a, b) => (a.precio > b.precio) ? 1 : ((b.precio > a.precio) ? -1 : 0))
+            break
+        default:
+            productosGaleria.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
+    }
+    
     //se agregan los prodcutos al div galeria
     let galeria = document.getElementById("galeria")
     galeria.innerHTML = ""
-    productos.forEach(element => {
+    productosGaleria.forEach(element => {
         let contenedor = document.createElement("div");
         contenedor.innerHTML = `
             <img src="${element.imagen} " alt="proteina">
@@ -48,19 +59,6 @@ function actualizarGaleria() {
             </div> `
         galeria.appendChild(contenedor)
     })
-}
-
-// onchage para odernar por precio o nombre 
-function ordenarBy(opcion) {
-    //odernar productos
-    switch (opcion) {
-        case 'precio':
-            productos.sort((a, b) => (a.precio > b.precio) ? 1 : ((b.precio > a.precio) ? -1 : 0))
-            break
-        default:
-            productos.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
-    }
-   actualizarGaleria()
 }
 
 //funcion de alerta al agregar un producto al carrito

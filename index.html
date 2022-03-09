@@ -32,8 +32,8 @@
             <span class="cantidad"></span>
         </div>
 
-        <div class="input_search">
-            <input class="input_search_style" type="text" placeholder="Buscar...">
+        <div  class="input_search">
+            <input id="encontrado" type="text" class="input_search_style" placeholder="Buscar...">
             <!-- <button type="submit"><span class="material-icons lupa_style">
                     search
                 </span></button> -->
@@ -129,7 +129,7 @@
                 <div class="ordernar">
                     <label for="ordenar">Ordenar por</label>
                     
-                        <select id="opcionOrdenar" class="ordenar_selection" onchange="ordenarBy(this.value)">
+                        <select id="opcionOrdenar" class="ordenar_selection" onchange="actualizarGaleria()">
                             <option value="nombre">Nombre</option>
                             <option value="precio">Precio</option>
                         </select>
@@ -192,6 +192,7 @@
     <script src="./js/carrucel.js"></script>
     <script type="text/javascript" src="./js/imc.js"></script>
     <script type="text/javascript" src="./js/carrito.js"></script>
+    <script type="text/javascript" src="./js/bucador.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
