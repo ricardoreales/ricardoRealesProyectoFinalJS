@@ -15,10 +15,9 @@ function recomendacionesImc(imc) {
             mensaje = "Usted se encuentra dentro del rango de obesidad, recomendamos ponerse en control con un Nutricionista y hacer ejercicio"
             break;
         default:
-            mensaje = "ingrese un valor valido "
+            mensaje = "ingrese un valor valido"
             break;
     }
-
     return mensaje
 }
 
@@ -34,10 +33,15 @@ function obtenerImc() {
 
     let peso = parseFloat(document.getElementById("peso").value);
     let altura = parseFloat(document.getElementById("altura").value);
+    const divImc = document.getElementById("imc")
+    divImc.innerHTML = ""
 
     if (peso > 0 && altura > 0) {
+        let imc = calculoImc(peso, altura)
+        divImc.innerHTML = imc.toFixed(2)
+        document.getElementById("recomendaciones").innerHTML = recomendacionesImc(imc)
 
-    } else {
+    }else {
         document.getElementById("recomendaciones").innerHTML = "ingrese un valor mayor a 0"
         alertCustom("ingrese un valor mayor a 0")
     }
@@ -45,12 +49,17 @@ function obtenerImc() {
 
     //ACA VA MI ALGORITMO
 
-    let imc = calculoImc(peso, altura)
+    
 
+    // if (imc = isNaN){
+    //     document.getElementById("imc").innerHTML = "ingrese un valor valido"
+        
+    
+    
+    
     //QUITAMOS EL ALERT O CONSOLE Y PONEMOS ASI
 
-    document.getElementById("imc").innerHTML = imc.toFixed(2)
-    document.getElementById("recomendaciones").innerHTML = recomendacionesImc(imc)
+  
 
 
 
