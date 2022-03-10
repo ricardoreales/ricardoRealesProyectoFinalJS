@@ -1,12 +1,16 @@
 [
-            { "id": 1, "nombre": "proteinaSexyFit", "precio": 2000, "imagen": "./imagenes/proteina-01.png" },
-            { "id": 2, "nombre": "proteinaPure100", "precio": 1900, "imagen": "./imagenes/proteina-02.png" },
-            { "id": 3, "nombre": "proteinaWomen", "precio": 1850, "imagen": "./imagenes/proteina-03.png" },
-            { "id": 4, "nombre": "proteinaUnique", "precio": 1700, "imagen": "./imagenes/proteina-04.png" },
-            { "id": 5, "nombre": "proteinaNutred", "precio": 1800, "imagen": "./imagenes/proteina-05.png" },
-            { "id": 6, "nombre": "proteinaMatrix", "precio": 1550, "imagen": "./imagenes/proteina-06.png" },
-            { "id": 7, "nombre": "proteinaZeroCarb", "precio": 1880, "imagen": "./imagenes/proteina-07.png" },
-            { "id": 8, "nombre": "proteinaGold", "precio": 1630, "imagen": "./imagenes/proteina-08.png" },
-            { "id": 8, "nombre": "proteinaPlatinum", "precio": 1630, "imagen": "./imagenes/proteina-09.png" },
-            { "id": 9, "nombre": "proteinaBest", "precio": 1520, "imagen": "./imagenes/proteina-10.png" }
+            { "id": 1, "nombre": "proteina-GOLD", "precio": 2000, "imagen": "./imagenes/proteina-01.png" },
+            { "id": 2, "nombre": "proteina-Pure100", "precio": 1900, "imagen": "./imagenes/proteina-02.png" },
+            { "id": 3, "nombre": "proteina-Woman+", "precio": 1850, "imagen": "./imagenes/proteina-03.png" },
+            { "id": 4, "nombre": "proteina-Platinum", "precio": 1700, "imagen": "./imagenes/proteina-04.png" },
+            { "id": 5, "nombre": "proteina-RED", "precio": 1800, "imagen": "./imagenes/proteina-05.png" },
+            { "id": 6, "nombre": "proteina-Best", "precio": 1550, "imagen": "./imagenes/proteina-06.png" },
+            { "id": 7, "nombre": "proteina-Nutrend", "precio": 1880, "imagen": "./imagenes/proteina-07.png" },
+            { "id": 8, "nombre": "proteina-Matrix", "precio": 1630, "imagen": "./imagenes/proteina-08.png" },
+            { "id": 9, "nombre": "proteina-ZeroCarb", "precio": 1630, "imagen": "./imagenes/proteina-09.png" },
+            { "id": 10, "nombre": "RuleOne-preWar", "precio": 1800, "imagen": "./imagenes/prewar1.png" },
+            { "id": 11, "nombre": "ENA-preWar", "precio": 950, "imagen": "./imagenes/prewar2.png" },
+            { "id": 12, "nombre": "TotalWar-preWar", "precio": 1250, "imagen": "./imagenes/prewar3.png" },
+            { "id": 13, "nombre": "PINK-preWar", "precio": 2500, "imagen": "./imagenes/prewar4.png" },
+            { "id": 14, "nombre": "proteina-SexyFit", "precio": 1520, "imagen": "./imagenes/proteina-10.png" }
         ]

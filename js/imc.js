@@ -33,17 +33,19 @@ function obtenerImc() {
 
     let peso = parseFloat(document.getElementById("peso").value);
     let altura = parseFloat(document.getElementById("altura").value);
+
     const divImc = document.getElementById("imc")
+    const recomendaciones = document.getElementById("recomendaciones")
     divImc.innerHTML = ""
 
     if (peso > 0 && altura > 0) {
         let imc = calculoImc(peso, altura)
         divImc.innerHTML = imc.toFixed(2)
-        document.getElementById("recomendaciones").innerHTML = recomendacionesImc(imc)
+        recomendaciones.innerHTML = recomendacionesImc(imc)
 
     }else {
-        document.getElementById("recomendaciones").innerHTML = "ingrese un valor mayor a 0"
-        alertCustom("ingrese un valor mayor a 0")
+        recomendaciones.innerHTML = "ingrese un valor mayor a 0"
+        alertCustom("No has insertado ningun valor")
     }
 
 

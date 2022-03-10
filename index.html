@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>proyecto_final_js_Ricardo_Reales</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-
     <link rel="icon" href="./imagenes/nutritionZoneLogo-04.svg" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header>
-
         <a href="#"> <img class="logo_header" src="./imagenes/nutritionZoneLogo-04.svg" alt=""> </a>
-
+        <div class="slogan">
+        <h1  >El comienzo de la SALUD </h1>
+        <h1  > es la NUTRICIÓN</h1>
+    </div>
         <div class="redes_header">
             <a href="#"> <img class="redes_header_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
             <a href="#"><img class="redes_header_icono" src="./iconos/twitter_icono.svg" alt=""></a>
@@ -31,12 +30,8 @@
             <span class="material-icons">shopping_cart</span>
             <span class="cantidad"></span>
         </div>
-
-        <div  class="input_search">
+        <div class="input_search">
             <input id="encontrado" type="text" class="input_search_style" placeholder="Buscar...">
-            <!-- <button type="submit"><span class="material-icons lupa_style">
-                    search
-                </span></button> -->
         </div>
         <nav>
             <div id="toggle"></div>
@@ -50,7 +45,6 @@
             </div>
         </nav>
     </div>
-
     <div id="carritoModal">
         <span class="material-icons close">close</span>
         <h2>MI COMPRA</h2>
@@ -61,53 +55,31 @@
             </table>
         </div>
     </div>
-
-
-
-
-
-    <section aria-label="Newest Photos">
-        <div class="carousel" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="./imagenes/proteinaCarrucel-10.jpg" alt="Nature Image #1">
-                </li>
-                <li class="slide">
-                    <img src="./imagenes/proteinaCarrucel-09.jpg" alt="Nature Image #2">
-                </li>
-                <li class="slide">
-                    <img src="./imagenes/proteinaCarrucel-08.jpg" alt="Nature Image #3">
-                </li>
-            </ul>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./imagenes/proteinaCarrucel-10.jpg" style="width:100%">
         </div>
-    </section>
-
-    <!-- <section class="section_imc">
-        <div class="btn_imc_container">
-            <a href="#" class="btn">
-                <div class="text_btn_1">CALCULAR</div>
-                <div class="text_btn_2">IMC</div> -->
-    <!-- <div class="text_btn_3">Indice de Masa Corporal</div> -->
-    <!-- </a>
-        </div> -->
-    <!-- <button class="btn_imc_container">
-            <div class="texte_Buttom1">CALCULAR</div>
-            <div class="texte_Buttom2">IMC</div>
-            <div class="texte_Buttom3">Indice de Masa Corporal</div>
-        </button> -->
-    <!-- </section> -->
-
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./imagenes/proteinaCarrucel-09.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./imagenes/proteinaCarrucel-08.jpg" style="width:100%">
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
     <section class="imc_container">
         <div class="input">
             <h2 class="h2_titulo">CALCULA TU IMC </h2>
             <h3>(indice de masa corporal)</h3>
-
             <input type="text" id="nombre" placeholder="ingresa tu nombre" class="input_style">
-
             <input type="number" id="peso" placeholder="ingresa tu peso en (kg)" class="input_style">
-
             <input type="number" id="altura" placeholder="ingresa tu altura en (mts)" class="input_style">
             <input class="calcular_style" onclick="obtenerImc()" type="button" value="Calcular!">
         </div>
@@ -118,9 +90,6 @@
             <p id="recomendaciones"></p>
         </div>
     </section>
-
-
-
     <main>
         <div id="listado">
             <div class="ordenar_por">
@@ -128,24 +97,16 @@
                 <hr>
                 <div class="ordernar">
                     <label for="ordenar">Ordenar por</label>
-                    
-                        <select id="opcionOrdenar" class="ordenar_selection" onchange="actualizarGaleria()">
-                            <option value="nombre">Nombre</option>
-                            <option value="precio">Precio</option>
-                        </select>
 
-                       
-                       
-                    
+                    <select id="opcionOrdenar" class="ordenar_selection" onchange="actualizarGaleria()">
+                        <option value="nombre">Nombre</option>
+                        <option value="precio">Precio</option>
+                    </select>
                 </div>
                 <hr>
             </div>
         </div>
-
-        <div></div>
-
         <section id="galeria" class="galeria_productos">
-
         </section>
     </main>
     <footer>
@@ -157,7 +118,6 @@
                     <button class="btn_suscribirse">suscribirse</button>
                 </div>
             </div>
-
             <div class="redes_footer_container">
                 <div class="redes_footer_container_icon">
                     <a href="#"> <img class="redes_footer_icono" src="./iconos/instagram_icono.svg" alt=""> </a>
@@ -170,34 +130,21 @@
                 </div>
             </div>
             <div>
-                <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt="">
+                <a href="#"> <img class="logo_footer" src="./imagenes/nutritionZoneLogo-04.svg" alt=""> </a>
+               
             </div>
         </div>
-
-
         <div class="autor">
             <h2>By: Ricardo Reales</h2>
             <h2>coder.ricardo.9bf5</h2>
         </div>
-
-
-
-
-
-
-
     </footer>
-
     <script src="./js/nav.js"></script>
-    <script src="./js/carrucel.js"></script>
+    <script src="./js/carrucel2.js"></script>
     <script type="text/javascript" src="./js/imc.js"></script>
     <script type="text/javascript" src="./js/carrito.js"></script>
     <script type="text/javascript" src="./js/bucador.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-
-
-
 </body>
 
 </html>

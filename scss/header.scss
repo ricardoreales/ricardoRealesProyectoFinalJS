@@ -1,30 +1,35 @@
-header{
-    
-    width: 100%;
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $colorSecundario;
+  padding: 10px;
+  .logo_header {
+    width: 300px;
+    margin-left: 100px;
+  }
+
+  .slogan {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $colorSecundario;
-    padding: 10px;
-    .logo_header{
-        width: 300px;
-        margin-left: 100px;
-        
+    flex-direction: column;
+
+    font-size: 1.5rem;
+    color: $colorCuatro;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 255, 255),
+      0 0 0.2em rgb(255, 255, 255);
+  }
+
+  .redes_header {
+    display: flex;
+
+    .redes_header_icono {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+      padding: 10px;
+      background-color: $colorPrimario;
+      border-radius: 10px;
     }
-    .redes_header{
-        display: flex;
-        
-        
-        .redes_header_icono{
-            
-            height: 50px;
-            width: 50px;
-            margin: 5px;
-            padding: 10px;
-            background-color: $colorPrimario;
-            border-radius: 10px;
-            
-        }
-        
-    }
+  }
 }
