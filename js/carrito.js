@@ -56,7 +56,7 @@ function actualizarGaleria() {
             <div class="cantidad_style">
                 <h2>${element.nombre} </h2>
                 <h3>$ ${element.precio} </h3>
-                <button class="agregar_carrito" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
+                <button class="button_secundario" onclick="agregarAlCarrito(${element.id})" >Agregar al carrito</button>
             </div> `
         galeria.appendChild(contenedor)
     })
@@ -153,11 +153,13 @@ function actualizarCantidad(productoId, input) {
         let actualizarMontos = document.querySelectorAll('#subtotalPorProducto')
         carrito.forEach(function (producto, index) {
             if (producto.id === productoId) {
-                carrito.cantidad = cantidad
-                actualizarMontos[index].innerHTML = Number(cantidad * carrito[index].precio)
+                producto.cantidad = cantidad
+                actualizarMontos[index].innerHTML = Number(cantidad * producto.precio)
+                calcularTotal()
             }
         });
-        localStorage.setItem('productos', JSON.stringify(carrito));
+        
+        localStorage.setItem('productos', JSON.stringify(carrito))
         input.classList.remove("text_red")
     } else {
         alertCustom("Ingresar un valor entero", "bottom", "left")
@@ -184,8 +186,19 @@ function vaciarCarrito() {
     actualizaCarrito()
 }
 
-function calcularTotal() {
+function procesarCompra(){
+    if(carrito.length){
+        alertCustom("Gracias por su compra", "bottom", "left")
+        vaciarCarrito()
+    }else{
+        alertCustom("Agregue un producto", "bottom", "left")
 
+    }
+    
+}
+
+function calcularTotal() {
+console.log(carrito)
     let total = 0
     let iva = 0
     let subtotal = 0
@@ -194,7 +207,7 @@ function calcularTotal() {
         total = total + Number(carrito[i].precio * carrito[i].cantidad)
     }
     if (total > 0) {
-        iva = parseFloat(total * 0.21).toFixed(2)
+        iva = parseFloat((total * 21)/121).toFixed(2)
         subtotal = parseFloat(total - iva).toFixed(2)
     }
 
@@ -202,5 +215,6 @@ function calcularTotal() {
     document.getElementById('iva').innerHTML = "IVA:" + iva
     document.getElementById('total').innerHTML = "TOTAL:" + total.toFixed(2)
 }
+
 
 

@@ -1,0 +1,148 @@
+//mobile 
+@media (min-width: 370px) and (max-width: 767px) {
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $colorSecundario;
+        padding: 10px;
+        .logo_header {
+            width: 200px;
+            padding: 10px;
+            margin-left: 15px;
+            margin-top: 10px; 
+        }
+        .slogan {
+          display: flex;
+          font-size: 0.7rem;
+        }
+        .redes_header {
+          display: none;
+        }
+      }
+
+      .container_nav {
+
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $colorTerceario;
+        .input_search {
+          .input_search_style {
+            padding: 6px;
+            border-radius: 20px;
+            width: 200px;
+          }
+        
+        }
+       
+      }
+
+      .imc_container {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background-color: rgb(49, 49, 49);
+        background-image: url("../imagenes/imcImagenfondo-10.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+      
+        .h2_titulo{
+          background-color: $colorPrimario;
+          border: 2px solid $colorCuatro;
+          border-radius: 30px;
+          margin: 2px;
+          padding:  5px 50px 5px 50px;
+          font-size: 20px;
+          width: 250px;
+        }
+      
+      
+      
+      
+        h2 {
+          font-size: 12px;
+          text-align: center;
+          padding: 5px;
+        }
+        h3 {
+            width: 200px;
+          font-size: 15px;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      
+      
+        
+        .input_resultado {
+          padding: 5px 50px 5px 50px;
+          font-size: 25px;
+          background-color: $colorPrimario;
+          border: 2px solid $colorCuatro;
+          border-radius: 20px;
+        }
+      
+        .input {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px 70px 20px 70px;
+          width: 50vw;
+          font-size: 20px;
+          
+          // background-image: url("../imagenes/fonfoLineasTransversales-10.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+      
+          .input_style {
+            padding: 5px 250px 5px 30px;
+            font-size: 20px;
+            width: 20vw;
+            margin: 10px;
+            text-align: center;
+            border-radius: 30px;
+            color: aqua;
+            
+          }
+      
+      
+      
+          
+        }
+      
+        .recomendaciones_style {
+          margin-top: 60px;
+          margin-bottom: 60px;
+          margin-right: 0px;
+          
+          font-size: 20px;
+          text-align: center;
+          border: 2px solid $colorCuatro;
+          border-radius: 20px;
+          width: 80%;
+          height: 200px;
+        }
+      }
+      
+      
+      
+
+      
+      
+}
+
+    
+@media (min-width: 768px) and (max-width: 1199px){}
+@media (min-width: 1200px) {}

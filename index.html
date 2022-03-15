@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="inicio">
         <a href="#"> <img class="logo_header" src="./imagenes/nutritionZoneLogo-04.svg" alt=""> </a>
         <div class="slogan">
             <h1>El comienzo de la SALUD </h1>
@@ -37,10 +37,10 @@
             <div id="toggle"></div>
             <div id="sidebar">
                 <ul>
-                    <li><a href="#">inicio</a></li>
-                    <li><a href="#">IMC</a></li>
-                    <li><a href="#">proteinas</a></li>
-                    <li><a href="#">contactame </a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#imc">Calcula tu IMC</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contactanos">Contactanos </a></li>
                 </ul>
             </div>
         </nav>
@@ -61,12 +61,12 @@
             <div class="suma_total">
                <div id="subtotalProducto"></div>
                <div id="iva"></div>
-               <div id="total"></div>
+               <div class="text_red" id="total"></div>
             </div>
 
             <div class="button_carrito">
-                <button type="submit">Procesar Compra</button>
-                <a href="javascript:void(0)" onclick="vaciarCarrito()" class="button_vaciar">Vaciar Carrito</a>
+                <button  onclick="procesarCompra()" type="submit" class="button_terciario" role="button" >Procesar Compra</button>
+                <a  onclick="vaciarCarrito()" class="button_primario" role="button">Vaciar Carrito</a>
             </div>
         </form>
     </div>
@@ -90,14 +90,14 @@
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
-    <section class="imc_container">
+    <section class="imc_container " id="imc">
         <div class="input">
             <h2 class="h2_titulo">CALCULA TU IMC </h2>
             <h3>(indice de masa corporal)</h3>
             <input type="text" id="nombre" placeholder="ingresa tu nombre" class="input_style">
             <input type="number" id="peso" placeholder="ingresa tu peso en (kg)" class="input_style">
             <input type="number" id="altura" placeholder="ingresa tu altura en (mts)" class="input_style">
-            <input class="calcular_style" onclick="obtenerImc()" type="button" value="Calcular!">
+            <input class="button_primario" onclick="obtenerImc()" type="button" value="Calcular!">
         </div>
         <div class="recomendaciones_style">
             <h2>Recomendaciones segun tu
@@ -106,7 +106,7 @@
             <p id="recomendaciones"></p>
         </div>
     </section>
-    <main>
+    <main id="productos">
         <div id="listado">
             <div class="ordenar_por">
                 <h1 class="h1_main">proteinas</h1>
@@ -125,7 +125,7 @@
         <section id="galeria" class="galeria_productos">
         </section>
     </main>
-    <footer>
+    <footer id="contactanos">
         <div class="container_redes_contacto">
             <div class="newslatter_container">
                 <h2 class="h2_newslatter">Suscribirse para recibir todas nuestra promociones</h2>
