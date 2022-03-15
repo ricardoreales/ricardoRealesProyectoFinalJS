@@ -639,14 +639,15 @@ footer {
       border-radius: 30px;
       margin: 2px;
       padding: 5px 50px 5px 50px;
-      font-size: 20px;
-      width: 250px; }
+      font-size: 25px;
+      width: 320px; }
     .imc_container h2 {
-      font-size: 12px;
+      font-size: 20px;
       text-align: center;
-      padding: 5px; }
+      padding: 5px;
+      border: 1px solid red; }
     .imc_container h3 {
-      width: 200px;
+      width: 300px;
       font-size: 15px;
       text-align: center;
       margin-bottom: 10px; }
@@ -661,18 +662,18 @@ footer {
       align-items: center;
       flex-direction: column;
       padding: 20px 70px 20px 70px;
-      width: 50vw;
+      width: 100vw;
       font-size: 20px;
       background-repeat: no-repeat;
       background-size: cover; }
       .imc_container .input .input_style {
-        padding: 5px 250px 5px 30px;
+        padding: 5px 300px 5px 30px;
         font-size: 20px;
-        width: 20vw;
+        width: 350px;
         margin: 10px;
         text-align: center;
         border-radius: 30px;
-        color: aqua; }
+        color: red; }
     .imc_container .recomendaciones_style {
       margin-top: 60px;
       margin-bottom: 60px;
