@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:ital@1&display=swap");
+.text_red {
+  color: red; }
+
+.bold {
+  font-weight: bold; }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -245,48 +251,65 @@ header {
 
 #carritoModal {
   position: fixed;
-  top: 170px;
+  top: 0px;
   left: -100%;
-  width: 100%;
+  width: 40%;
   background: white;
   transition: 0.5s;
   z-index: 1000; }
-  #carritoModal .close {
+  #carritoModal .tituloCarritoModal {
     display: flex;
-    color: #f15a24;
-    justify-content: flex-end;
-    margin-right: 10px;
-    font-size: 3rem;
-    cursor: pointer; }
-  #carritoModal h2 {
-    background: #f15a24;
-    padding: 10px 0px 10px 0px;
-    text-align: center; }
-  #carritoModal div {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    background: #f15a24; }
+    #carritoModal .tituloCarritoModal h2 {
+      width: 90%;
+      padding: 10px 0px 10px 0px;
+      text-align: center; }
+    #carritoModal .tituloCarritoModal .close {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      font-size: 2rem;
+      cursor: pointer; }
+  #carritoModal .miCompra {
     overflow: hidden scroll;
     height: 70vh; }
-    #carritoModal div table {
+    #carritoModal .miCompra table {
       text-align: center;
       border: 1px solid white;
       font-size: 2rem;
       margin-left: auto;
       margin-right: auto;
       width: 90%; }
-      #carritoModal div table tbody tr td:first-child {
-        width: 10vw; }
-        #carritoModal div table tbody tr td:first-child img {
-          width: 100%; }
-      #carritoModal div table tbody small {
+      #carritoModal .miCompra table tbody tr td {
+        font-size: 1rem; }
+        #carritoModal .miCompra table tbody tr td:first-child {
+          width: 10vw; }
+          #carritoModal .miCompra table tbody tr td:first-child img {
+            width: 50%; }
+      #carritoModal .miCompra table tbody small {
         color: #949494;
-        font-size: 1.2rem; }
-      #carritoModal div table tbody input {
+        font-size: 1rem; }
+      #carritoModal .miCompra table tbody input {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         border: 0px;
         width: 40px; }
-      #carritoModal div table tbody .material-icons {
-        color: #f15a24;
-        font-size: 2rem; }
+      #carritoModal .miCompra table tbody .material-icons {
+        color: red;
+        font-size: 2rem;
+        cursor: pointer; }
+  #carritoModal .button_carrito {
+    height: 15vh;
+    text-align: end;
+    margin-right: 40px; }
+  #carritoModal .suma_total {
+    height: 15vh;
+    text-align: end;
+    margin-right: 200px;
+    background-color: red; }
 
 #carritoModal.active {
   left: 0px; }

@@ -10,36 +10,41 @@
   justify-content: center;
   align-items: center;
   .cantidad {
-      border-radius: 100%;
-      padding: 10px;
-      background: $colorPrimario;
+    border-radius: 100%;
+    padding: 10px;
+    background: $colorPrimario;
   }
 }
 
 #carritoModal {
   position: fixed;
-  top: 170px;
+  top: 0px;
   left: -100%;
-  width: 100%;
-
+  width: 40%;
   background: $colorCuatro;
   transition: 0.5s;
   z-index: 1000;
-  .close {
-    display: flex;
-    color: $colorPrimario;
-    justify-content: flex-end;
-    margin-right: 10px;
-    font-size: 3rem;
-    cursor: pointer;
-  }
 
-  h2 {
+  .tituloCarritoModal {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
     background: $colorPrimario;
-    padding:10px 0px 10px 0px ;
-    text-align: center;
+    h2 {
+      width: 90%;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+    }
+    .close {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
   }
-  div {
+  .miCompra {
     overflow: hidden scroll;
     height: 70vh;
     table {
@@ -49,33 +54,49 @@
       margin-left: auto;
       margin-right: auto;
       width: 90%;
-      tbody{
-        tr{
-          td{
-            &:first-child{
+      tbody {
+        tr {
+          td {
+            font-size: 1rem;
+            &:first-child {
               width: 10vw;
               img {
-                width: 100%;
+                width: 50%;
               }
             }
           }
         }
         small {
           color: $colorTerceario;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
-        input{
+        input {
           text-align: center;
-          font-size: 1.5rem;
+          font-size: 1rem;
           border: 0px;
           width: 40px;
         }
         .material-icons {
-          color: $colorPrimario;
+          color: red;
           font-size: 2rem;
+          cursor: pointer;
         }
       }
     }
+  }
+  .button_carrito {
+    height: 15vh;
+    text-align: end;
+    margin-right: 40px;
+  }
+  .suma_total{
+    height: 15vh;
+    text-align: end;
+    margin-right: 200px;
+    background-color: red;
+    
+    
+
   }
 }
 

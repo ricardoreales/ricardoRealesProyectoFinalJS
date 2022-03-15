@@ -3,6 +3,7 @@ const carritoToggle = document.getElementById("carritoToggle")
 const carritoModal = document.getElementById("carritoModal")
 const carritoClose = carritoModal.getElementsByClassName("close")[0]
 const carritoCantidad = carritoToggle.getElementsByClassName("cantidad")[0]
+const carritoProductos = document.getElementById("carritoProductos")
 
 
 //funcion para cerrar ventana del carrito
@@ -34,7 +35,7 @@ fetch("./data.json")
 
 //funcion para agregar los productos a la galeria
 function actualizarGaleria() {
-    
+
     //odernar productos
     const opcion = document.getElementById("opcionOrdenar").value
     switch (opcion) {
@@ -44,7 +45,7 @@ function actualizarGaleria() {
         default:
             productosGaleria.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
     }
-    
+
     //se agregan los prodcutos al div galeria
     let galeria = document.getElementById("galeria")
     galeria.innerHTML = ""
@@ -92,13 +93,10 @@ if (storageCarrito) {
     // console.log(carrito)
 }
 
-
-//para agregar productos 
+//Agregar productos al Carrito 
 function agregarAlCarrito(productoId) {
     //primero busco el array carrito si existe el producto
     const productoCarrito = carrito.find(item => item.id === parseInt(productoId))
-    console.log(productoId)
-    console.log(productoCarrito)
     if (productoCarrito === undefined) {
         //aqui se busca en el array productos por su id 
         const producto = productos.find(item => item.id === parseInt(productoId))
@@ -117,21 +115,14 @@ function agregarAlCarrito(productoId) {
     actualizaCarrito()
 
     alertCustom("Producto Agregado", "top")
-
-
 }
-
-
 
 function actualizaCarrito() {
     //actualizar el numero de icono del carrito
     carritoCantidad.innerHTML = carrito.length
-
-
-    //
-    let carritoProductos = document.getElementById("carritoProductos")
+    //vaciar el div de carrito producto
     carritoProductos.innerHTML = ""
-    console.log(carritoProductos.innerHTML)
+
     if (carrito.length) {
         carrito.forEach(item => {
             let totalItem = item.cantidad * item.precio
@@ -139,17 +130,77 @@ function actualizaCarrito() {
             fila.innerHTML = `
             <td><img src="${item.imagen}" alt=""></td>
             <td>
-                <h4>${item.producto}</h4> 
+                <h4>${item.nombre}</h4> 
                 <small>$ ${item.precio} por unidad</small>
             </td>
-            <td><input type="number" value="${item.cantidad}"></td>
-            <td><h4>$ ${totalItem}</h4></td>
-            <td><span class="material-icons">delete_forever</span></td> `
+            <td><input type="number" value="${item.cantidad}" min="1" step="1" onchange="actualizarCantidad(${item.id},this)" required></td>
+            <td id="subtotalPorProducto" class="bold">$ ${totalItem}</td>
+            <td><span onclick="removerProducto(${item.id})" class="material-icons">delete_forever</span></td> `
             carritoProductos.appendChild(fila)
         });
-
     } else {
         carritoProductos.innerHTML = "<tr><td>usted no cuenta con productos agragdos al carrito</td></tr>"
     }
+    calcularTotal()
 }
+
+
+
+function actualizarCantidad(productoId, input) {
+    let cantidad = Number(input.value)
+
+    if (Number.isInteger(cantidad)) {
+        let actualizarMontos = document.querySelectorAll('#subtotalPorProducto')
+        carrito.forEach(function (producto, index) {
+            if (producto.id === productoId) {
+                carrito.cantidad = cantidad
+                actualizarMontos[index].innerHTML = Number(cantidad * carrito[index].precio)
+            }
+        });
+        localStorage.setItem('productos', JSON.stringify(carrito));
+        input.classList.remove("text_red")
+    } else {
+        alertCustom("Ingresar un valor entero", "bottom", "left")
+        input.classList.add("text_red")
+    }
+}
+
+function removerProducto(productoId) {
+    //Comparar el id del producto borrado con LS
+    carrito.forEach(function (producto, index) {
+        if (producto.id === productoId) {
+            carrito.splice(index, 1)
+        }
+    });
+
+    //Añadimos el arreglo actual al Local Storage
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    actualizaCarrito()
+}
+
+function vaciarCarrito() {
+    carrito = []
+    localStorage.clear();
+    actualizaCarrito()
+}
+
+function calcularTotal() {
+
+    let total = 0
+    let iva = 0
+    let subtotal = 0
+
+    for (let i = 0; i < carrito.length; i++) {
+        total = total + Number(carrito[i].precio * carrito[i].cantidad)
+    }
+    if (total > 0) {
+        iva = parseFloat(total * 0.21).toFixed(2)
+        subtotal = parseFloat(total - iva).toFixed(2)
+    }
+
+    document.getElementById('subtotalProducto').innerHTML = "subtotal:" + subtotal
+    document.getElementById('iva').innerHTML = "IVA:" + iva
+    document.getElementById('total').innerHTML = "TOTAL:" + total.toFixed(2)
+}
+
 
