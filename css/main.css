@@ -15,7 +15,9 @@ body.modalOpen {
   color: white;
   background-color: #949494;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .ordenar_por .h1_main {
     font-size: 3rem;
     text-transform: uppercase; }
@@ -283,16 +285,17 @@ header {
 #carritoToggle {
   top: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   z-index: 5;
+  padding: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center; }
   #carritoToggle .cantidad {
     border-radius: 100%;
-    padding: 10px;
+    padding: 8px 13px;
     background: #f15a24; }
 
 #carritoModal {
@@ -426,6 +429,8 @@ img {
 .imc_container {
   padding-left: 200px;
   padding-right: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: white;
   display: flex;
   align-items: center;
@@ -484,7 +489,9 @@ img {
   color: white;
   background-color: #949494;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .ordenar_por .h1_main {
     font-size: 3rem;
     text-transform: uppercase; }
@@ -583,7 +590,7 @@ footer {
         padding: 10px;
         font-size: 1.5rem; }
   footer .logo_footer {
-    width: 10vw;
+    width: 15vw;
     margin-top: 25px;
     margin-bottom: 25px; }
   footer .autor {
@@ -733,13 +740,18 @@ footer {
       flex-direction: column;
       justify-content: space-around;
       align-items: center; }
-      footer .container_redes_contacto .newslatter {
+      footer .container_redes_contacto .newslatter_container .newslatter {
         flex-direction: column; }
-        footer .container_redes_contacto .newslatter .input-style {
+        footer .container_redes_contacto .newslatter_container .newslatter .input-style {
           padding: 10px;
           width: 80vw; }
     footer .contactos_container h2 {
       padding: 10px;
       font-size: 1.5rem; }
-  .logo_footer {
-    width: 100vw; } }
+    footer .logo_footer {
+      width: 10rem;
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+
+#sidebar {
+  width: 80%; }

@@ -181,13 +181,13 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-
-      .newslatter {
-        flex-direction: column;
-
-        .input-style {
-          padding: 10px;
-          width: 80vw;
+      .newslatter_container {
+        .newslatter {
+          flex-direction: column;
+          .input-style {
+            padding: 10px;
+            width: 80vw;
+          }
         }
       }
     }
@@ -198,9 +198,15 @@
         font-size: 1.5rem;
       }
     }
-  }
 
-  .logo_footer {
-    width: 100vw;
+    .logo_footer {
+      width: 10rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
+}
+
+#sidebar {
+  width: 80%;
 }
