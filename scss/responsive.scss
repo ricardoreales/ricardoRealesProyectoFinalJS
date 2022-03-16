@@ -1,5 +1,5 @@
 //mobile
-@media (min-width: 370px) and (max-width: 767px) {
+@media only screen and (max-width: 414px) {
   header {
     width: 100%;
     display: flex;
@@ -41,9 +41,6 @@
       }
     }
   }
-
- 
-
 
   #carritoModal {
     position: fixed;
@@ -130,78 +127,64 @@
       height: 200px;
     }
   }
-}
 
-.galeria_productos {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px;
-  justify-content: flex-start;
-  grid-column-gap: 10px;
-  grid-row-gap: 20px;
-  margin: 20px;
-  justify-content: center;
-
-  img {
-    width: 100px;
-    display: block;
-    margin: auto;
-
-    &:hover {
-      transform: scale(1.1);
-      transition: transform 250ms;
-    }
-  }
-  .cantidad_style {
-    color: $colorCuatro;
-    border-radius: 10px;
-    padding: 1px;
-    margin-top: 10px;
+  .galeria_productos {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: $colorTerceario;
-    label {
-      font-size: 1rem;
-    }
-    input {
-      font-size: 20px;
-      margin-top: 5px;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: flex-start;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    margin: 20px;
+    justify-content: center;
+
+    img {
       width: 100px;
-      margin-bottom: 10px;
+      display: block;
+      margin: auto;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 250ms;
+      }
     }
-  }
-}
-
-footer {
-  background-color: $colorSecundario;
-  display: flex;
-  flex-direction: column;
-  color: $colorCuatro;
-
-  .container_redes_contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    .newslatter_container {
+    .cantidad_style {
+      color: $colorCuatro;
+      border-radius: 10px;
+      padding: 1px;
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
       text-align: center;
-      color: $colorCuatro;
-      .h2_newslatter {
-        padding: 10px;
-        font-size: 20px;
+      background-color: $colorTerceario;
+      label {
+        font-size: 1rem;
       }
+      input {
+        font-size: 20px;
+        margin-top: 5px;
+        width: 100px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  footer {
+    background-color: $colorSecundario;
+    display: flex;
+    flex-direction: column;
+    color: $colorCuatro;
+
+    .container_redes_contacto {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
       .newslatter {
-        display: flex;
         flex-direction: column;
-        padding: 20px;
-        align-items: center;
-        justify-content: center;
+
         .input-style {
           padding: 10px;
           width: 80vw;
@@ -218,11 +201,6 @@ footer {
   }
 
   .logo_footer {
-    width: 50vw;
+    width: 100vw;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-}
-@media (min-width: 1200px) {
 }
