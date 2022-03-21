@@ -16,3 +16,13 @@ donde podrás:
 . Ver el precio unitario y total de cada item
 . ver el precio con IVA y el valor del IVA
 . Monto TOTAL de la suma de todos los productos
+
+
+Requerimientos para el entorno de desarrollo:
+-Instalción de NodeJS
+-Instalar node-sass y nodemon : 
+$ npm install -D node-sass nodemon
+-Para ejecutar nuestro script de una línea, necesitamos ejecutar el siguiente comando en la terminal:
+$ npm run watch-css
+*Esto es solo cada vez que cambiemos alun archivo del SCSS. 
+
