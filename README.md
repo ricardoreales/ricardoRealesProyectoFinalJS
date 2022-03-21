@@ -1,13 +1,13 @@
 ﻿# ricardoRealesProyectoFinalJS
 Este proyecto trata acerca de un ecommerce de venta de proteinas.
 
--En el header podras observar dentro del nav, un buscador de productos, un toggle para el menu y otro para ingresar al carrito de compras. mostrando el total de productos agregados. 
+-En el header podrás observar dentro del nav, un buscador de productos, un toggle para el menú y otro para ingresar al carrito de compras. mostrando el total de productos agregados. 
 
--En la segunda parte consta de una calculadora de indice de masa corporal que muestra diferentes recomendaciones según el resultado de tu IMC.
+-En la segunda parte consta de una calculadora de índice de masa corporal que muestra diferentes recomendaciones según el resultado de tu IMC.
 
--En la tercera parte se encuentra el área donde se muestra un listado productos, ordenados incialmente por su nombre, con la opcion de ordenar por precio si se desea, cada producto contiene un botón para ser agregado al carrito de compras.
+-En la tercera parte se encuentra el área donde se muestra un listado productos, ordenados incialmente por su nombre, con la opción de ordenar por precio si se desea, cada producto contiene un botón para ser agregado al carrito de compras.
 
--finalmete tendras el modal del carrito de compras,
+-Finalmete tendrás el modal del carrito de compras,
 donde podrás:
 . Ver el total de productos cargados
 . Ver el precio unitario de cada uno
@@ -24,11 +24,11 @@ Requerimientos para el entorno de desarrollo:
 
 -Instalar node-sass y nodemon : 
 
-# $ npm install -D node-sass nodemon
+## $ npm install -D node-sass nodemon
 
 -Para ejecutar nuestro script de una línea, necesitamos ejecutar el siguiente comando en la terminal:
 
-# $ npm run watch-css
+## $ npm run watch-css
 
 *Esto es solo cada vez que cambiemos alun archivo del SCSS. 
 
