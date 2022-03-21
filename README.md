@@ -19,10 +19,16 @@ donde podrás:
 
 
 Requerimientos para el entorno de desarrollo:
+
 -Instalción de NodeJS
+
 -Instalar node-sass y nodemon : 
-$ npm install -D node-sass nodemon
+
+# $ npm install -D node-sass nodemon
+
 -Para ejecutar nuestro script de una línea, necesitamos ejecutar el siguiente comando en la terminal:
-$ npm run watch-css
+
+# $ npm run watch-css
+
 *Esto es solo cada vez que cambiemos alun archivo del SCSS. 
 
